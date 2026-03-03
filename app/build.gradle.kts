@@ -40,7 +40,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":kotlinlib"))
+    // Correct format for JitPack with multi-module projects
+    implementation("com.github.DeveloperRejaul.kotlinlib:kotlinlib:1.0.1")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
