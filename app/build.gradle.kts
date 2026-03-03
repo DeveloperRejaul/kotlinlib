@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.rezaul.kotlinlibrary"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.rezaul.kotlinlibrary"
@@ -41,7 +41,7 @@ android {
 
 dependencies {
     // Correct format for JitPack with multi-module projects
-    implementation("com.github.DeveloperRejaul.kotlinlib:kotlinlib:1.0.1")
+    implementation("com.github.DeveloperRejaul:kotlinlib:1.0.1") // use build libary
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)

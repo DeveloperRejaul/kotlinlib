@@ -12,6 +12,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.rezaul.kotlinlibrary.ui.theme.KotlinLibraryTheme
+import com.rezaul.kotlinlib.MyLib
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,8 +34,9 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
+    val message = MyLib.sayHello("Rezaul Karim")
     Text(
-        text = "Hello $name!",
+        text = message,
         modifier = modifier
     )
 }
