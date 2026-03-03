@@ -55,7 +55,23 @@ This will generate the build files ready for upload.
 2. Create a GitHub release for that tag
 3. Upload the compiled build files from `kotlinlib/build/libs/` to the release
 
-## Step 7: Wait for JitPack Build
+## Step 7: Create Package for GitHub
+
+Run the following command to create the package:
+
+```bash
+./gradlew :kotlinlib:build
+```
+
+To publish to GitHub Packages, configure your credentials and run:
+
+```bash
+./gradlew :kotlinlib:publish
+```
+
+Or use JitPack (recommended) which builds automatically from your GitHub releases.
+
+## Step 8: Wait for JitPack Build
 
 After creating a release on GitHub, JitPack will automatically detect it and build your library. 
 

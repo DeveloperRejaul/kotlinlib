@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.github.DeveloperRejaul"
-version = "1.0.4"
+version = "1.0.5"
 
 java {
     withSourcesJar()
@@ -27,7 +27,14 @@ publishing {
         }
     }
     repositories {
-        // For JitPack to work, publish to Maven Local
+        // maven {
+        //     name = "GitHubPackages"
+        //     url = uri("https://maven.pkg.github.com/DeveloperRejaul/kotlinlib")
+        //     credentials {
+        //         username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_ACTOR")
+        //         password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
+        //     }
+        // }
         mavenLocal()
     }
 }
