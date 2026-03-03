@@ -20,5 +20,14 @@ kotlin {
     }
 }
 
-// JitPack will automatically build from your GitHub releases
-// No need to configure publishing here
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            from(components["java"])
+        }
+    }
+    repositories {
+        // For JitPack to work, publish to Maven Local
+        mavenLocal()
+    }
+}
