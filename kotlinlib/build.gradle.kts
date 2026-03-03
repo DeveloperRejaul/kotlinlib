@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.github.DeveloperRejaul"
-version = "1.0.2"
+version = "1.0.3"
 
 java {
     withSourcesJar()
@@ -20,20 +20,5 @@ kotlin {
     }
 }
 
-publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            from(components["java"])
-        }
-    }
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/DeveloperRejaul/kotlinlib")
-            credentials {
-                username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_ACTOR")
-                password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
-            }
-        }
-    }
-}
+// JitPack will automatically build from your GitHub releases
+// No need to configure publishing here
