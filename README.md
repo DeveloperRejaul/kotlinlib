@@ -55,6 +55,47 @@ This will generate the build files ready for upload.
 2. Create a GitHub release for that tag
 3. Upload the compiled build files from `kotlinlib/build/libs/` to the release
 
+## Step 7: Wait for JitPack Build
+
+After creating a release on GitHub, JitPack will automatically detect it and build your library. 
+
+Monitor the build progress at:
+```
+https://jitpack.io/#DeveloperRejaul/kotlinlib/TAG
+```
+
+Once the build is complete (green checkmark), your library will be available for download and can be used as a dependency in other projects.
+
 ---
 
-**Note:** Make sure to follow semantic versioning for your release tags.
+## Usage
+
+### Add the Library to Your Project
+
+Add the JitPack repository and the library dependency to your `build.gradle.kts`:
+
+```gradle
+repositories {
+    maven { url = uri("https://jitpack.io") }
+}
+
+dependencies {
+    implementation("com.github.DeveloperRejaul:KotlinLibrary:VERSION")
+}
+```
+
+Replace `VERSION` with the latest release version.
+
+### Use the Library
+
+Import and use the library in your code:
+
+```kt
+import com.rezaul.kotlinlib.MyLib
+
+fun main() {
+    val greeting = MyLib.sayHello("World")
+    println(greeting)
+    // Output: Hello World! This is from my public Kotlin library.
+}
+```

@@ -35,8 +35,9 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     val message = MyLib.sayHello("Rezaul Karim")
+    val message2 = MyLib.sayHi("Rezaul Karim")
     Text(
-        text = message,
+        text = message + message2,
         modifier = modifier
     )
 }
