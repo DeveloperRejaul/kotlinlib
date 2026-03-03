@@ -8,4 +8,8 @@ object MyLib {
     fun sayHi (name:String):String {
         return "Hi $name"
     }
+    
+    fun sayGoodbye(name: String): String {
+        return "Goodbye $name!"
+    }
 }
