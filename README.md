@@ -107,7 +107,7 @@ In your module's `build.gradle.kts`, add:
 
 ```gradle
 dependencies {
-    implementation("com.github.DeveloperRejaul:KotlinLibrary:v1.0.7")
+    implementation 'com.github.DeveloperRejaul:kotlinlib:v1.0.7'
 }
 ```
 
