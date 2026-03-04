@@ -58,8 +58,8 @@ This will generate the build files ready for upload.
 **Git Command:**
 
 ```bash
-git tag v1.0.6
-git push origin v1.0.6
+git tag v1.0.7
+git push origin v1.0.7
 ```
 
 Then create the release on GitHub at: https://github.com/DeveloperRejaul/KotlinLibrary/releases/new
@@ -71,7 +71,7 @@ After creating the git tag and GitHub release, JitPack will automatically detect
 
 Monitor the build progress at:
 ```
-https://jitpack.io/#DeveloperRejaul/KotlinLibrary/v1.0.6
+https://jitpack.io/#DeveloperRejaul/kotlinlib/v1.0.7
 ```
 
 **Look for a green checkmark ✅** - once you see it, your library is ready to use!
@@ -107,7 +107,7 @@ In your module's `build.gradle.kts`, add:
 
 ```gradle
 dependencies {
-    implementation 'com.github.DeveloperRejaul:kotlinlib:v1.0.7'
+    implementation ('com.github.DeveloperRejaul:kotlinlib:v1.0.7')
 }
 ```
 
