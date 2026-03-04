@@ -131,8 +131,3 @@ fun main() {
 - `MyLib.sayHi(name: String): String` - Returns a Hi message
 
 ---
-
-## Support
-
-For issues and questions, visit: https://github.com/DeveloperRejaul/KotlinLibrary
-```
